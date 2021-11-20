@@ -11,12 +11,15 @@ import string
 import nltk
 from nltk import word_tokenize
 nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 from nltk.corpus import stopwords
 from nltk.corpus import words
 #from nltk.stem import WordNetLemmatizer
 #from nltk import tokenize
 from nltk.tag import pos_tag
+
 
 def preprocessing(str):
     #stopword removal
