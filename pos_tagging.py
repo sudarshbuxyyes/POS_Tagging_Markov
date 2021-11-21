@@ -28,7 +28,8 @@ def preprocessing(str):
     no_punc = [char for char in str if char not in string.punctuation]
     no_punc = ''.join(no_punc)
     #add word lemmatization.
-    return ' '.join([word for word in no_punc.split() if (word.lower() not in Stop)])
+    #return ' '.join([word for word in no_punc.split() if (word.lower() not in Stop)])
+    return ' '.join([word for word in no_punc.split()])
 
 def pos_tagging(s):
     nopunc_sentence = preprocessing(s)
@@ -38,7 +39,7 @@ def pos_tagging(s):
     for tag in tags:
         if tag[1] in ["NN","NNS","NNP","NNPS"]: #NN-singular noun, NNS- noun plural, NNP-proper noun singular, NNPS- proper noun plural.
             dict_tag['NN'].append(tag[0])
-        elif tag[1] == "VB":
+        elif tag[1] in ["VB","VBD","VBG","VBN","VBP","VBZ"]:
             dict_tag['VB'].append(tag[0])
         else:
             dict_tag['OTH'].append(tag[0])
