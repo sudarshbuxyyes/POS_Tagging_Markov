@@ -7,3 +7,6 @@ Team Members:
 3. Tarini Sharma: @TariniSharma
 4. Madhur Singh: @madhur332
 5. Pranav Dargan: @pranavdargan
+
+References:
+https://www.coursera.org/learn/probabilistic-models-in-nlp
